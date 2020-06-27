@@ -28,80 +28,100 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.Hellolabel = new System.Windows.Forms.Label();
-            this.sum1 = new System.Windows.Forms.TextBox();
-            this.sum2 = new System.Windows.Forms.TextBox();
-            this.sum_btn = new System.Windows.Forms.Button();
-            this.sum_res = new System.Windows.Forms.TextBox();
+            this.num1 = new System.Windows.Forms.Button();
+            this.num2 = new System.Windows.Forms.Button();
+            this.numscreen = new System.Windows.Forms.Label();
+            this.numplus = new System.Windows.Forms.Button();
+            this.Operation = new System.Windows.Forms.Label();
+            this.result = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // Hellolabel
+            // num1
             // 
-            this.Hellolabel.AutoSize = true;
-            this.Hellolabel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Hellolabel.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Hellolabel.Location = new System.Drawing.Point(95, 46);
-            this.Hellolabel.Name = "Hellolabel";
-            this.Hellolabel.Size = new System.Drawing.Size(105, 12);
-            this.Hellolabel.TabIndex = 0;
-            this.Hellolabel.Text = "여기를 클릭하시오";
-            this.Hellolabel.Click += new System.EventHandler(this.Hellolabel_Click);
+            this.num1.Location = new System.Drawing.Point(45, 124);
+            this.num1.Name = "num1";
+            this.num1.Size = new System.Drawing.Size(62, 53);
+            this.num1.TabIndex = 0;
+            this.num1.Text = "1";
+            this.num1.UseVisualStyleBackColor = true;
+            this.num1.Click += new System.EventHandler(this.num1_Click);
             // 
-            // sum1
+            // num2
             // 
-            this.sum1.Location = new System.Drawing.Point(12, 113);
-            this.sum1.Name = "sum1";
-            this.sum1.Size = new System.Drawing.Size(100, 21);
-            this.sum1.TabIndex = 1;
+            this.num2.Location = new System.Drawing.Point(128, 124);
+            this.num2.Name = "num2";
+            this.num2.Size = new System.Drawing.Size(63, 53);
+            this.num2.TabIndex = 1;
+            this.num2.Text = "2";
+            this.num2.UseVisualStyleBackColor = true;
+            this.num2.Click += new System.EventHandler(this.num2_Click);
             // 
-            // sum2
+            // numscreen
             // 
-            this.sum2.Location = new System.Drawing.Point(116, 113);
-            this.sum2.Name = "sum2";
-            this.sum2.Size = new System.Drawing.Size(100, 21);
-            this.sum2.TabIndex = 2;
+            this.numscreen.BackColor = System.Drawing.Color.White;
+            this.numscreen.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.numscreen.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.numscreen.Location = new System.Drawing.Point(36, 13);
+            this.numscreen.Name = "numscreen";
+            this.numscreen.Size = new System.Drawing.Size(449, 39);
+            this.numscreen.TabIndex = 2;
+            this.numscreen.Text = "0";
+            this.numscreen.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // sum_btn
+            // numplus
             // 
-            this.sum_btn.Location = new System.Drawing.Point(222, 113);
-            this.sum_btn.Name = "sum_btn";
-            this.sum_btn.Size = new System.Drawing.Size(75, 23);
-            this.sum_btn.TabIndex = 3;
-            this.sum_btn.Text = "=";
-            this.sum_btn.UseVisualStyleBackColor = true;
-            this.sum_btn.Click += new System.EventHandler(this.sum_btn_Click);
+            this.numplus.Location = new System.Drawing.Point(391, 124);
+            this.numplus.Name = "numplus";
+            this.numplus.Size = new System.Drawing.Size(75, 53);
+            this.numplus.TabIndex = 3;
+            this.numplus.Text = "+";
+            this.numplus.UseVisualStyleBackColor = true;
+            this.numplus.Click += new System.EventHandler(this.numplus_Click);
             // 
-            // sum_res
+            // Operation
             // 
-            this.sum_res.Location = new System.Drawing.Point(303, 113);
-            this.sum_res.Name = "sum_res";
-            this.sum_res.Size = new System.Drawing.Size(100, 21);
-            this.sum_res.TabIndex = 4;
+            this.Operation.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.Operation.Location = new System.Drawing.Point(36, 70);
+            this.Operation.Name = "Operation";
+            this.Operation.Size = new System.Drawing.Size(449, 36);
+            this.Operation.TabIndex = 4;
+            this.Operation.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // result
+            // 
+            this.result.Location = new System.Drawing.Point(391, 196);
+            this.result.Name = "result";
+            this.result.Size = new System.Drawing.Size(75, 48);
+            this.result.TabIndex = 5;
+            this.result.Text = "=";
+            this.result.UseVisualStyleBackColor = true;
+            this.result.Click += new System.EventHandler(this.result_Click);
             // 
             // Calculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.sum_res);
-            this.Controls.Add(this.sum_btn);
-            this.Controls.Add(this.sum2);
-            this.Controls.Add(this.sum1);
-            this.Controls.Add(this.Hellolabel);
+            this.Controls.Add(this.result);
+            this.Controls.Add(this.Operation);
+            this.Controls.Add(this.numplus);
+            this.Controls.Add(this.numscreen);
+            this.Controls.Add(this.num2);
+            this.Controls.Add(this.num1);
             this.Name = "Calculator";
             this.Text = "Form1";
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label Hellolabel;
-        private System.Windows.Forms.TextBox sum1;
-        private System.Windows.Forms.TextBox sum2;
-        private System.Windows.Forms.Button sum_btn;
-        private System.Windows.Forms.TextBox sum_res;
+        private System.Windows.Forms.Button num1;
+        private System.Windows.Forms.Button num2;
+        private System.Windows.Forms.Label numscreen;
+        private System.Windows.Forms.Button numplus;
+        private System.Windows.Forms.Label Operation;
+        private System.Windows.Forms.Button result;
     }
 }
 
